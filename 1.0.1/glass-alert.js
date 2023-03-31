@@ -66,12 +66,16 @@ class GlassAlert {
             if (obj.imgWidth) {
                 document.querySelector('.glass-alert-modal-image img').style.width = obj.imgWidth;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.width = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.width = '';
+                }
             }
             if (obj.imgHeight) {
                 document.querySelector('.glass-alert-modal-image img').style.height = obj.imgHeight;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.height = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.height = '';
+                }
             }
             if (obj.titleColor) {
                 document.querySelector('.glass-alert-modal h1').style.color = obj.titleColor;
@@ -110,12 +114,16 @@ class GlassAlert {
             if (obj.imgWidth) {
                 document.querySelector('.glass-alert-modal-image img').style.width = obj.imgWidth;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.width = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.width = '';
+                }
             }
             if (obj.imgHeight) {
                 document.querySelector('.glass-alert-modal-image img').style.height = obj.imgHeight;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.height = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.height = '';
+                }
             }
             if (obj.titleColor) {
                 document.querySelector('.glass-alert-modal h1').style.color = obj.titleColor;
@@ -150,12 +158,16 @@ class GlassAlert {
             if (obj.imgWidth) {
                 document.querySelector('.glass-alert-modal-image img').style.width = obj.imgWidth;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.width = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.width = '';
+                }
             }
             if (obj.imgHeight) {
                 document.querySelector('.glass-alert-modal-image img').style.height = obj.imgHeight;
             } else {
-                document.querySelector('.glass-alert-modal-image img').style.height = '';
+                if (document.querySelector('.glass-alert-modal-image img')) {
+                    document.querySelector('.glass-alert-modal-image img').style.height = '';
+                }
             }
             if (obj.titleColor) {
                 document.querySelector('.glass-alert-modal h1').style.color = obj.titleColor;
