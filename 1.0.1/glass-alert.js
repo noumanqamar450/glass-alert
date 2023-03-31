@@ -14,7 +14,7 @@ glassAlertModal.innerHTML = `
     </div>
 </div>
 `;
-css.href = window.location.href + '1.0.1/glass-alert-style.css'
+css.href = 'https://cdn.jsdelivr.net/gh/noumanqamar450/glass-alert@master/1.0.1/glass-alert-style.css';
 css.rel = 'stylesheet';
 css.type = 'text/css';
 
