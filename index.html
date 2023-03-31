@@ -4,55 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Glass Alert - Easy to Use Alert Box</title>
     <link rel="stylesheet" href="./assets/css/prism.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <button onclick="onClickHandle()">Click</button>
-    <button onclick="onClickHandle2()">Click 2</button>
-    <button onclick="onClickHandle3()">Click 3</button>
-    <code class="lang-js">
-        alertBox.run({
-            title:'Hello World!',
-            text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            img:'https://media.giphy.com/media/l1J9wQIaj0He3bTSU/giphy.gif'
-        })
-    </code>
-    <p></p>
-    <script src="./assets/js/prism.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/glass-alert@master/1.0.1/glass-alert.js"></script> -->
-    <script src="./1.0.1/glass-alert.js"></script>
-    <script>
-        let dark = {theme:'dark'}
-        let light = {theme:'light'} // if you did not use alert by default is in light theme
-        let custom = {themeColor:'#FFFF00', textColor:'#FF0000'}
-        const alertBox = new GlassAlert(dark);
-        const onClickHandle = () => {
-            alertBox.run({
-                    title:'Hello World!',
-                    text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!',
-                    img:'https://media.giphy.com/media/l1J9wQIaj0He3bTSU/giphy.gif'
-                })
-        }
-        const onClickHandle2 = () => {
-            alertBox.run({
-                title: 'Hello World 2!',
-                    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.Accusantium exercitationem, laborum commodi natus aliquam asperiores.Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!`,
-                    img: 'https://media.giphy.com/media/3ohhwiuD4hmKIVdfzy/giphy.gif',
-                    imgWidth:'200px',
-                    imgHeight:'200px',
-                    titleColor:'#ff0000',
-                    contentColor:'#808080',
-                })
-            }
-        const onClickHandle3 = () => {
-            alertBox.run({
-                    title:'Hello World!',
-                    text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!',
-                })
-        }
-    </script>
     
+    <header>
+        <div class="nav">
+            <a href="/">
+                <img src="./assets/image/logo.png" alt="Glass Alert">
+            </a>
+            <div class="overlay"></div>
+            <ul>
+                <div class="collapse-x"><i class="bi bi-x-lg"></i></div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="https://github.com/noumanqamar450/glass-alert"><i class="bi bi-github"></i></a></li>
+            </ul>
+            <div class="collapse">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+    <div class="hero" id="home">
+        <div class="block">
+            <img src="./assets/image/favicon.png" alt="Logo">
+            <h1>Glass Alert</h1>
+            <p>Easy to Use, Beautiful & light weight Glass Alert Box</p>
+            <button class="btn" onclick="checkAlert()">Check Alert</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="demo" id="demo">
+            <h1 class="heading">Demo</h1>
+            <p class="detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, inventore modi qui ducimus itaque, reiciendis earum eligendi quod, quidem odit aliquam culpa. Vero expedita delectus aut eveniet modi harum itaque porro illo.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="demo-image">
+                        <img src="./assets/image/demo-image.png" alt="Demo Image">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="blocks">
+                        <div class="block">
+                            <h2>1. Light Theme Alert Box</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button class="btn" onclick="lightTheme()">Check Alert</button>
+                        </div>
+                        <div class="block">
+                            <h2>2. Dark Theme Alert Box</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button class="btn" onclick="darkTheme()">Check Alert</button>
+                        </div>
+                        <div class="block">
+                            <h2>3. Custom Theme Alert Box</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button class="btn" onclick="customTheme()">Check Alert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/prism.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/glass-alert@master/1.0.1/glass-alert.min.js"></script> -->
+    <script src="./1.0.1/glass-alert.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

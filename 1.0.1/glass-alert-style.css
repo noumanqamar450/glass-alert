@@ -82,6 +82,7 @@ body {
 }
 .glass-alert .glass-alert-modal h1 {
     font-size: 26px;
+    line-height: 60px;
 }
 .glass-alert .glass-alert-modal p {
     line-height: 22px;

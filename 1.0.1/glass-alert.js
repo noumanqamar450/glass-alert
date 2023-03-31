@@ -28,9 +28,9 @@ runGlassAlert()
 class GlassAlert {
     constructor(props){
         if (props){
-            this.theme = props.theme
-            this.themeColor = props.themeColor
-            this.textColor = props.textColor
+            this.theme = props.theme ? props.theme : ''
+            this.themeColor = props.themeColor ? props.themeColor : ''
+            this.textColor = props.textColor ? props.textColor : ''
         }
     }
     run(obj) {
@@ -49,6 +49,7 @@ class GlassAlert {
             //Theme
             document.querySelector('.glass-alert-overlay').style.background = themeColorOverlay;
             document.querySelector('.glass-alert-modal').style.background = themeColorModal;
+
             if (this.textColor){
                 document.querySelector('.glass-alert-modal').style.color = this.textColor;
             } else {
@@ -97,6 +98,9 @@ class GlassAlert {
             //Theme
             document.querySelector('.glass-alert-overlay').classList.add('dark');
             document.querySelector('.glass-alert-modal').classList.add('dark');
+            document.querySelector('.glass-alert-overlay').style.background = '';
+            document.querySelector('.glass-alert-modal').style.background = '';
+
             if (this.textColor) {
                 document.querySelector('.glass-alert-modal').style.color = this.textColor;
             } else {
@@ -136,6 +140,12 @@ class GlassAlert {
                 document.querySelector('.glass-alert-modal p').style.color = '';
             }
         } else {
+            //Theme
+            document.querySelector('.glass-alert-overlay').classList.remove('dark');
+            document.querySelector('.glass-alert-modal').classList.remove('dark');
+            document.querySelector('.glass-alert-overlay').style.background = '';
+            document.querySelector('.glass-alert-modal').style.background = '';
+
             //Modal Active
             document.querySelector('.glass-alert-modal h1').textContent = obj.title;
             document.querySelector('.glass-alert-modal p').textContent = obj.text;

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgMain : #2D033B;
+    --bgSecondary : #37306B;
+    --heading : 'Playfair Display', serif;
+    --pColor : #cecece;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bgSecondary);
+}
+
+header .nav {
+    max-height: 70px;
+    width: 100%;
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+header .nav.active {
+    background: rgba(45, 3, 59, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+header .nav img {
+    max-width: 140px;
+}
+
+header .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+header .nav ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+header .nav ul li:hover a {
+    opacity: 0.7;
+}
+
+/* Mobile Nav */
+
+header .nav .collapse {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    display: none;
+} 
+
+header .nav .collapse:hover {
+    opacity: 0.7;
+}
+
+header .nav .overlay {
+    display: none;
+}
+
+header .nav ul .collapse-x {
+    display: none;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+@media screen and (max-width:992px) {
+    header .nav img {
+        max-width: 120px;
+    }
+    header .nav ul {
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        background: #fff;
+        top: 0px;
+        left: -100%;
+        padding: 20px;
+        display: block;
+        z-index: 99999;
+        text-align: center;
+        transition: 0.5s;
+    }
+    header .nav ul.active {
+        left: 0;
+    }
+    header .nav .overlay {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background: var(--bgMain);
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none;
+    }
+    header .nav .overlay.active{
+        display: block;
+    }
+    header .nav ul li a {
+        display: block;
+        color: var(--bgMain);
+        padding: 20px 40px;
+    }
+    header .nav .collapse {
+        display:block;
+    }
+    header .nav ul .collapse-x {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        transition: 0.2s;
+    }
+    header .nav ul .collapse-x.pop {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width:540px) {
+    header .nav ul {
+        width: 100%;
+    }
+    header .nav .overlay {
+        display: none !important;
+    }
+}
+
+
+/* Site */
+.hero {
+    background: url('../image/hero-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 100px 20px;
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;
+}
+
+.hero .block {
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border:1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero .block::before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    right: -35px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+.hero .block::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    bottom: -35px;
+    left: -35px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero .block img {
+    max-width: 100px;
+}
+
+.hero .block h1 {
+    font-family: var(--heading);
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+.hero .block p {
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: none;
+}
+.col-6 {
+    width: 50%;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+@media screen and (max-width:786px) {
+    .row {
+        flex-wrap: wrap;
+    }
+    .col-6 {
+        width: 100%;
+    }
+}
+
+/* Demo */
+
+.demo {
+    padding: 50px 0px;
+}
+
+.heading {
+    font-size: 32px;
+    color: #fff;
+    font-family: var(--heading);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail {
+    font-size: 18px;
+    color: var(--pColor);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.demo .demo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.demo .blocks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.demo .blocks .block {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid gray;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.demo .blocks .block:nth-last-child(1) {
+    border: none;
+    margin: 0;
+}
