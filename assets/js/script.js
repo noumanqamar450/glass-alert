@@ -38,6 +38,24 @@ overlay.addEventListener('click', () => {
     }, 200)
 })
 
+// Clipboard Copy
+
+let copyBtn = document.querySelectorAll('.btn-copy')
+let copyCode = document.querySelectorAll('.code code')
+let codeArea = document.querySelectorAll('.code')
+for (let i = 0; i < copyBtn.length; i++){
+    copyBtn[i].addEventListener('click', ()=>{
+        copyBtn[i].innerHTML = `<i class="bi bi-clipboard-check-fill"></i>`;
+        codeArea[i].style.borderColor = 'rgba(255, 255, 255, 0.5)';
+        navigator.clipboard.writeText(copyCode[i].innerText);
+        setTimeout(()=>{
+            codeArea[i].style.borderColor = '';
+            copyBtn[i].innerHTML = `<i class="bi bi-clipboard"></i>`;
+        }, 1000)
+    })
+}
+
+// Alert
 
 let dark = { theme: 'dark' }
 let light = { theme: 'light' } // if you did not use alert by default is in light theme
@@ -92,3 +110,6 @@ const customT = () => {
         contentColor: '',
     })
 }
+
+
+

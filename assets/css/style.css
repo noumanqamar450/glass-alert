@@ -329,3 +329,91 @@ img {
     border: none;
     margin: 0;
 }
+
+hr {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 0.1px;
+}
+
+.install {
+    padding: 100px 0px;
+}
+
+code, div.code {
+    position: relative;
+}
+
+div.code  {
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(45, 45, 45, 0.33) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    min-height: 20px;
+    margin-bottom: 30px !important;
+    padding: 20px;
+    font-size: 15px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+div.code .btn-copy {
+    position: absolute;
+    top: 10px;
+    padding: 7px;
+    border: none;
+    right: 10px;
+    background: rgba(45, 45, 45, 0.33) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    line-height: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+div.code:hover .btn-copy {
+    opacity: 1;
+}
+
+div.code .btn-copy:hover {
+    opacity: 0.7;
+}
+
+/* Code Highlighter */
+
+.kwd {
+    color: #bfbfff !important;
+}
+
+.pln, .com {
+    color: #e9e8e8 !important;
+}
+
+.typ {
+    color: #f0f !important;
+}
+
+.str {
+    color: #04cd04 !important;
+}
+
+.clo,
+.opn,
+.pun {
+    color: #a5a558 !important;
+}
+
+@media  screen and (max-width:640px) {
+    div.code .btn-copy {
+        opacity: 1;
+    }
+}
