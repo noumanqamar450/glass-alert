@@ -20,7 +20,7 @@ css.type = 'text/css';
 
 const runGlassAlert = () => {
     document.body.appendChild(glassAlertModal)
-    document.head.appendChild()
+    document.head.appendChild(css)
 }
 
 runGlassAlert()
