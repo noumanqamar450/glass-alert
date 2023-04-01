@@ -1,0 +1,142 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.glass-alert {
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+.glass-alert.active {
+    display: flex;
+}
+.glass-alert.opacity {
+    opacity: 1;
+}
+.glass-alert .glass-alert-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 198, 236, 0.3);
+    position: fixed;
+    top:0;
+    left: 0;
+    backdrop-filter: blur(0.6px);
+    -webkit-backdrop-filter: blur(0.6px);
+}
+.glass-alert .glass-alert-overlay.dark {
+    background: rgba(0, 43, 91, 0.3);
+}
+.glass-alert .glass-alert-modal{
+    max-width: 500px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(8.7px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    text-align: center;
+    z-index: 10000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 20px;
+    animation: GADownAni 0.5s;
+    overflow: hidden;
+}
+.glass-alert .glass-alert-modal.active {
+    animation: GAUpAni 0.5s;
+}
+
+.glass-alert .glass-alert-modal.dark {
+    color: #fff;
+    background: rgba(0, 43, 91, 0.5);
+}
+.glass-alert .glass-alert-modal .glass-alert-modal-x {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.glass-alert .glass-alert-modal-x.glass-alert-pop {
+    animation: GAPopAni 0.5s;
+}
+.glass-alert .glass-alert-modal .glass-alert-modal-x:hover {
+    transform: rotate(90deg);
+}
+.glass-alert .glass-alert-modal .glass-alert-modal-image {
+    width: 100%;
+}
+.glass-alert .glass-alert-modal .glass-alert-modal-image img{
+    width: 50%;
+}
+.glass-alert .glass-alert-modal h1 {
+    font-size: 26px;
+    line-height: 60px;
+}
+.glass-alert .glass-alert-modal p {
+    line-height: 22px;
+}
+
+.glass-alert .glass-alert-modal .glass-alert-modal-content {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.glass-alert .glass-alert-modal .glass-alert-modal-content::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+}
+
+.glass-alert .glass-alert-modal .glass-alert-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(50, 50, 50, 0.5);
+    border-radius: 50px;
+}
+
+@keyframes GADownAni {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes GAUpAni {
+    0% {
+        transform: scale(0);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes GAPopAni {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -165,6 +165,7 @@ header .nav ul .collapse-x {
     justify-content: center;
     align-items: center;
     min-height: 750px;
+    overflow: hidden;
 }
 
 .hero .block {
@@ -276,7 +277,7 @@ img {
 /* Demo */
 
 .demo {
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .heading {

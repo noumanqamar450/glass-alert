@@ -41,20 +41,22 @@ overlay.addEventListener('click', () => {
 
 let dark = { theme: 'dark' }
 let light = { theme: 'light' } // if you did not use alert by default is in light theme
-let custom = { themeColor: '#FFFF00', textColor: '#FF0000' }
+let custom = { themeColor: '#ff0000', textColor: '' }
 const alertBox = new GlassAlert(light);
 const checkAlert = () => {
     alertBox.run({
         title: 'Glass Alert',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!',
-        img: 'https://media.giphy.com/media/l1J9wQIaj0He3bTSU/giphy.gif'
+        img: './assets/image/favicon.png',
+        imgWidth:'120px'
     })
 }
 const lightTheme = () => {
     alertBox.run({
         title: 'Light Theme',
         text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!`,
-        img: 'https://media.giphy.com/media/l1J9wQIaj0He3bTSU/giphy.gif',
+        img: './assets/image/favicon.png',
+        imgWidth: '120px'
     })
 }
 
@@ -63,7 +65,8 @@ const darkTheme = () => {
     alertBoxDark.run({
         title: 'Dark Theme',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!',
-        img: 'https://media.giphy.com/media/l1J9wQIaj0He3bTSU/giphy.gif',
+        img: './assets/image/favicon.png',
+        imgWidth: '120px'
     })
 }
 
@@ -72,11 +75,8 @@ const customTheme = () => {
     alertBoxCustom.run({
         title: 'Custom Theme',
         text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!`,
-        img: 'https://media.giphy.com/media/3ohhwiuD4hmKIVdfzy/giphy.gif',
-        imgWidth: '200px',
-        imgHeight: '200px',
-        titleColor: '#ff0000',
-        contentColor: '#808080',
+        img: './assets/image/favicon.png',
+        imgWidth: '120px',
     })
 }
 
@@ -85,10 +85,10 @@ const customT = () => {
         title: 'Hello World 2!',
         text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem, laborum commodi natus aliquam asperiores. Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.Accusantium exercitationem, laborum commodi natus aliquam asperiores.Illum autem eius ad corporis tempore nostrum facilis officiis veniam accusantium, placeat dolores dolorem animi!`,
-        img: 'https://media.giphy.com/media/3ohhwiuD4hmKIVdfzy/giphy.gif',
+        img: './assets/image/favicon.png',
         imgWidth: '200px',
         imgHeight: '200px',
-        titleColor: '#ff0000',
-        contentColor: '#808080',
+        titleColor: '',
+        contentColor: '',
     })
 }
